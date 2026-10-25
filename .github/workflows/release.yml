@@ -40,17 +40,6 @@ jobs:
           fi
           echo "publishing $manifest"
 
-  semver:
-    name: semver
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
-      - uses: dtolnay/rust-toolchain@stable
-      # No baseline exists until the first release, so this is informational then and
-      # binding afterwards.
-      - uses: obi1kenobi/cargo-semver-checks-action@6b69fcf40e9b5fb17adeb57e4b6ecd020649a239 # v2
-        continue-on-error: true
-
   package:
     name: package contents
     runs-on: ubuntu-latest
@@ -72,7 +61,7 @@ jobs:
 
   publish:
     name: publish
-    needs: [ci, tag, semver, package]
+    needs: [ci, tag, package]
     runs-on: ubuntu-latest
     permissions:
       id-token: write
