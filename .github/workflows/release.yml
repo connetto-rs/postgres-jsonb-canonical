@@ -26,7 +26,7 @@ jobs:
 
   tag:
     name: tag matches the manifest
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       - name: Compare
@@ -42,7 +42,7 @@ jobs:
 
   package:
     name: package contents
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       - uses: dtolnay/rust-toolchain@stable
@@ -62,7 +62,7 @@ jobs:
   publish:
     name: publish
     needs: [ci, tag, package]
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     permissions:
       id-token: write
     steps:
