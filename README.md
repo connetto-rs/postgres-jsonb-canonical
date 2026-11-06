@@ -1,6 +1,7 @@
 # postgres-jsonb-canonical
 
 [![CI](https://github.com/connetto-rs/postgres-jsonb-canonical/actions/workflows/ci.yml/badge.svg)](https://github.com/connetto-rs/postgres-jsonb-canonical/actions/workflows/ci.yml)
+[![Codecov](https://codecov.io/gh/connetto-rs/postgres-jsonb-canonical/branch/main/graph/badge.svg)](https://codecov.io/gh/connetto-rs/postgres-jsonb-canonical)
 [![crates.io](https://img.shields.io/crates/v/postgres-jsonb-canonical.svg)](https://crates.io/crates/postgres-jsonb-canonical)
 [![docs.rs](https://img.shields.io/docsrs/postgres-jsonb-canonical)](https://docs.rs/postgres-jsonb-canonical)
 [![license](https://img.shields.io/crates/l/postgres-jsonb-canonical.svg)](https://github.com/connetto-rs/postgres-jsonb-canonical/blob/main/LICENSE)
