@@ -199,18 +199,3 @@ jobs:
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
-  supply-chain:
-    name: supply chain
-    runs-on: ubuntu-26.04
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
-      - uses: dtolnay/rust-toolchain@stable
-      - uses: taiki-e/install-action@c509219cf42fba86913069efd0ade2458c59337b # v2
-        with:
-          tool: cargo-deny
-      - uses: taiki-e/install-action@c509219cf42fba86913069efd0ade2458c59337b # v2
-        with:
-          tool: cargo-audit
-      - run: cargo deny check
-      - run: cargo audit --deny warnings
-
